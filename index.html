@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Spriter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Face Spriter</h1>
+    <h2>By Valentino Grosso</h2>
+
+    <div class="controls-container">
+      <div class="video-container" id="videoContainer">
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="sliders" id="slidersContainer">
+        <div class="scrollable-box">
+          <h3>Adjust Left Eye</h3>
+          <label>Activate Left Eye: <input type="checkbox" id="leftEyeActive" checked></label>
+          <label>Upload Left Eye Image: <input type="file" id="leftEyeUpload" accept="image/*"></label>
+          <div class="slider-group">
+            <span>Height:</span>
+            <input type="range" id="leftEyeHeight" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="leftEyeHeightValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Width:</span>
+            <input type="range" id="leftEyeWidth" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="leftEyeWidthValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Position X:</span>
+            <input type="range" id="leftEyeX" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="leftEyeXValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Position Y:</span>
+            <input type="range" id="leftEyeY" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="leftEyeYValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Rotation:</span>
+            <input type="range" id="leftEyeRotation" min="-180" max="180" step="1" value="0">
+            <span class="slider-value" id="leftEyeRotationValue">0</span>
+          </div>
+
+          <h3>Adjust Right Eye</h3>
+          <label>Activate Right Eye: <input type="checkbox" id="rightEyeActive" checked></label>
+          <label>Upload Right Eye Image: <input type="file" id="rightEyeUpload" accept="image/*"></label>
+          <div class="slider-group">
+            <span>Height:</span>
+            <input type="range" id="rightEyeHeight" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="rightEyeHeightValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Width:</span>
+            <input type="range" id="rightEyeWidth" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="rightEyeWidthValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Position X:</span>
+            <input type="range" id="rightEyeX" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="rightEyeXValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Position Y:</span>
+            <input type="range" id="rightEyeY" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="rightEyeYValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Rotation:</span>
+            <input type="range" id="rightEyeRotation" min="-180" max="180" step="1" value="0">
+            <span class="slider-value" id="rightEyeRotationValue">0</span>
+          </div>
+
+          <h3>Adjust Nose</h3>
+          <label>Activate Nose: <input type="checkbox" id="noseActive" checked></label>
+          <label>Upload Nose Image: <input type="file" id="noseUpload" accept="image/*"></label>
+          <div class="slider-group">
+            <span>Height:</span>
+            <input type="range" id="noseHeight" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="noseHeightValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Width:</span>
+            <input type="range" id="noseWidth" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="noseWidthValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Position X:</span>
+            <input type="range" id="noseX" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="noseXValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Position Y:</span>
+            <input type="range" id="noseY" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="noseYValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Rotation:</span>
+            <input type="range" id="noseRotation" min="-180" max="180" step="1" value="0">
+            <span class="slider-value" id="noseRotationValue">0</span>
+          </div>
+
+          <h3>Adjust Mouth</h3>
+          <label>Activate Mouth: <input type="checkbox" id="mouthActive" checked></label>
+          <label>Upload Mouth Image: <input type="file" id="mouthUpload" accept="image/*"></label>
+          <div class="slider-group">
+            <span>Height:</span>
+            <input type="range" id="mouthHeight" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="mouthHeightValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Width:</span>
+            <input type="range" id="mouthWidth" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="mouthWidthValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Position X:</span>
+            <input type="range" id="mouthX" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="mouthXValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Position Y:</span>
+            <input type="range" id="mouthY" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="mouthYValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Rotation:</span>
+            <input type="range" id="mouthRotation" min="-180" max="180" step="1" value="0">
+            <span class="slider-value" id="mouthRotationValue">0</span>
+          </div>
+
+          <h3>Adjust Hat</h3>
+          <label>Activate Hat: <input type="checkbox" id="hatActive" checked></label>
+          <label>Upload Hat Image: <input type="file" id="hatUpload" accept="image/*"></label>
+          <div class="slider-group">
+            <span>Height:</span>
+            <input type="range" id="hatHeight" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="hatHeightValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Width:</span>
+            <input type="range" id="hatWidth" min="0.1" max="5" step="0.1" value="1">
+            <span class="slider-value" id="hatWidthValue">1</span>
+          </div>
+          <div class="slider-group">
+            <span>Position X:</span>
+            <input type="range" id="hatX" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="hatXValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Position Y:</span>
+            <input type="range" id="hatY" min="-0.5" max="0.5" step="0.05" value="0">
+            <span class="slider-value" id="hatYValue">0</span>
+          </div>
+          <div class="slider-group">
+            <span>Rotation:</span>
+            <input type="range" id="hatRotation" min="-180" max="180" step="1" value="0">
+            <span class="slider-value" id="hatRotationValue">0</span>
+          </div>
+        </div>
+
+        <h3>Reset Features</h3>
+        <button id="resetAll">Reset All Features</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
