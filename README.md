@@ -8,4 +8,4 @@ Now anyone can make the filter of their dreams and look like anyone or anything 
 !!!IMPORTANT FOR FACE SCANNING TO WORK!!!:
 1. Go here: chrome://flags/#enable-experimental-web-platform-features
 2. Enable 'Experimental Web Platform' features.
-3. Enabling this will allow for this function to actually work.
+3. Enabling this will allow for this function to actually work. It will not work if you don't do this.
