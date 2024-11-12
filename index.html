@@ -167,6 +167,52 @@
 
         <h3>Reset Features</h3>
         <button id="resetAll">Reset All Features</button>
+
+        <title>Change Webpage Background Color</title>
+        <style>
+          /* Default styles */
+          body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #d2b48c; /* Default color */
+            padding: 20px;
+          }
+          .controls {
+            margin-top: 20px;
+          }
+        </style>
+        </head>
+        <body>
+
+        <div class="controls">
+          <button onclick="resetBackgroundColor()">Reset Background Color</button>
+          <br><br>
+          <label for="colorPicker">Enter Background Color (HTML Color Code):</label>
+          <input type="text" id="colorPicker" placeholder="#d2b48c" oninput="changeBackgroundColor()">
+        </div>
+
+        <script>
+          // Function to change the webpage background color based on input field value
+          function changeBackgroundColor() {
+            const colorInput = document.getElementById("colorPicker").value;
+            
+            // Validate input as a valid hex color code
+            const colorPattern = /^#([0-9A-F]{3}){1,2}$/i;
+            if (colorPattern.test(colorInput)) {
+              document.body.style.backgroundColor = colorInput;
+            }
+          }
+
+          // Function to reset webpage background color to the default
+          function resetBackgroundColor() {
+            document.body.style.backgroundColor = "#d2b48c"; // Default color
+            document.getElementById("colorPicker").value = "#d2b48c"; // Update input field
+          }
+        </script>
+
+        </body>
+        </html>
       </div>
     </div>
   </div>
