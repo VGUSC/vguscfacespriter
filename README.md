@@ -5,7 +5,7 @@ Due to this, you'll have to send the link to yourself in a way that you can acce
 Besides that, have fun! The possible ways you can express a new look or style are endless with this super-customisable face filter!
 Now anyone can make the filter of their dreams and look like anyone or anything they like!
 
-Oh yeah, forgot to mention this only works on Chrome (for now...mweheheheh).
+This has been tested and deemed functional on Chrome and Microsoft Edge.
 
 !!!IMPORTANT FOR FACE SCANNING TO WORK!!!:
 1. Go here: chrome://flags/#enable-experimental-web-platform-features
